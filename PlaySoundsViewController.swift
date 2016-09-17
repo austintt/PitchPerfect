@@ -31,10 +31,25 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playSoundForButton(sender: UIButton) {
         print("Play sound pressed")
+        switch(buttonType(rawValue: sender.tag)!) {
+        case .Slow:
+            playSound(rate: 0.5)
+        case .Fast:
+            playSound(rate: 1.5)
+        case .Squirrel:
+            playSound(pitch: 1000)
+        case .Vader:
+            playSound(pitch: -1000)
+        case .Echo:
+            playSound(echo: true)
+        case .Reverb:
+            playSound(reverb: true)
+        }
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
         print("Stop button pressed")
+        stopAudio()
     }
     
     
@@ -43,6 +58,11 @@ class PlaySoundsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupAudio()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        configureUI(.NotPlaying)
     }
 
     override func didReceiveMemoryWarning() {

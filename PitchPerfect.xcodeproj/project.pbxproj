@@ -15,6 +15,7 @@
 		D92F958B1D5952DF002F4E99 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F958A1D5952DF002F4E99 /* PitchPerfectTests.swift */; };
 		D92F95961D5952DF002F4E99 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92F95951D5952DF002F4E99 /* PitchPerfectUITests.swift */; };
 		D96556A31D723713008E1230 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96556A21D723713008E1230 /* PlaySoundsViewController.swift */; };
+		D9D5703E1D8DE29500679072 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D5703D1D8DE29500679072 /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D92F95951D5952DF002F4E99 /* PitchPerfectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchPerfectUITests.swift; sourceTree = "<group>"; };
 		D92F95971D5952DF002F4E99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D96556A21D723713008E1230 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaySoundsViewController.swift; path = ../PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		D9D5703D1D8DE29500679072 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D92F95751D5952DF002F4E99 /* AppDelegate.swift */,
 				D96556A21D723713008E1230 /* PlaySoundsViewController.swift */,
 				D92F95771D5952DF002F4E99 /* RecordSoundsViewController.swift */,
+				D9D5703D1D8DE29500679072 /* PlaySoundsViewController+Audio.swift */,
 				D92F95791D5952DF002F4E99 /* Main.storyboard */,
 				D92F957C1D5952DF002F4E99 /* Assets.xcassets */,
 				D92F957E1D5952DF002F4E99 /* LaunchScreen.storyboard */,
@@ -196,13 +199,16 @@
 				TargetAttributes = {
 					D92F95711D5952DF002F4E99 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					D92F95851D5952DF002F4E99 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D92F95711D5952DF002F4E99;
 					};
 					D92F95901D5952DF002F4E99 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D92F95711D5952DF002F4E99;
 					};
 				};
@@ -260,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D92F95781D5952DF002F4E99 /* RecordSoundsViewController.swift in Sources */,
+				D9D5703E1D8DE29500679072 /* PlaySoundsViewController+Audio.swift in Sources */,
 				D96556A31D723713008E1230 /* PlaySoundsViewController.swift in Sources */,
 				D92F95761D5952DF002F4E99 /* AppDelegate.swift in Sources */,
 			);
@@ -409,6 +416,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -420,6 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -431,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchPerfect.app/PitchPerfect";
 			};
 			name = Debug;
@@ -443,6 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchPerfect.app/PitchPerfect";
 			};
 			name = Release;
@@ -454,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PitchPerfect;
 			};
 			name = Debug;
@@ -465,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tooley.T.Austin.PitchPerfectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = PitchPerfect;
 			};
 			name = Release;
