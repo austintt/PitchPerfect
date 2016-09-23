@@ -24,12 +24,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func configureUI(recording: Bool){
+        // Set label
+        recordingLabel.text =
+            recording ? "Recording in progress" : "Tap to Record"
+        
+        // Set buttons
+        recordButton.enabled = !recording
+        stopRecordButton.enabled = recording
+    }
 
     @IBAction func recordAudio(sender: AnyObject) {
-        recordingLabel.text = "Recording in Progress"
         print("Recording")
-        stopRecordButton.enabled = true
-        recordButton.enabled = false
+        configureUI(true)
         
         //start recording
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
@@ -50,9 +58,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func stopRecording(sender: AnyObject) {
         print("Stoped")
-        stopRecordButton.enabled = false
-        recordButton.enabled = true
-        recordingLabel.text = "Tap to Record"
+        configureUI(false)
         
         //stop recording
         audioRecorder.stop()

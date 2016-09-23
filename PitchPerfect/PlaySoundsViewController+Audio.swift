@@ -39,6 +39,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     
     func playSound(rate rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
         
+        configureUI(.Playing)
+        
         // initialize audio engine components
         audioEngine = AVAudioEngine()
         
